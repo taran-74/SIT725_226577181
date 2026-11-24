@@ -1,0 +1,12 @@
+{
+  "name": "sit725-3.2p-bookshelf",
+  "version": "1.0.0",
+  "description": "SIT725 3.2P - Getting Graphical: Bookshelf app using Express + Materialize",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

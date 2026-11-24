@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Bookshelf</title>
+  <!-- Materialize CSS + icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="teal darken-3">
+    <div class="nav-wrapper container">
+      <a href="#" class="brand-logo"><i class="material-icons">menu_book</i>My Bookshelf</a>
+    </div>
+  </nav>
+
+  <!-- Header section -->
+  <div class="section header-section teal lighten-5">
+    <div class="container center-align">
+      <h3 class="teal-text text-darken-3">Books Worth Reading</h3>
+      <p class="flow-text grey-text text-darken-2">A small collection of my favourite books. Click a book cover or the ⋮ icon to read more about it.</p>
+      <a class="waves-effect waves-light btn modal-trigger teal darken-2" href="#suggestModal" id="suggestBtn">
+        <i class="material-icons left">add</i>Suggest a Book
+      </a>
+    </div>
+  </div>
+
+  <!-- Cards are added here by scripts.js after calling GET /api/books -->
+  <div class="container section">
+    <div class="row" id="card-section"></div>
+  </div>
+
+  <!-- Modal with a form -->
+  <div id="suggestModal" class="modal">
+    <div class="modal-content">
+      <h4>Suggest a Book</h4>
+      <div class="row">
+        <form class="col s12" id="suggestForm">
+          <div class="input-field col s12 m6">
+            <input id="bookTitle" type="text" class="validate" required>
+            <label for="bookTitle">Book Title</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <input id="bookAuthor" type="text" class="validate" required>
+            <label for="bookAuthor">Author</label>
+          </div>
+          <div class="input-field col s12">
+            <textarea id="bookReason" class="materialize-textarea"></textarea>
+            <label for="bookReason">Why should I read it?</label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect btn-flat">Cancel</a>
+      <a href="#!" id="formSubmit" class="waves-effect waves-light btn teal darken-2">Submit</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="page-footer teal darken-3">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h5 class="white-text">My Bookshelf</h5>
+          <p class="grey-text text-lighten-4">SIT725 Task 3.2P - Getting Graphical (Express + Materialize + REST API)</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">&copy; 2026 SIT725 Student 226577181</div>
+    </div>
+  </footer>
+
+  <!-- jQuery + Materialize JS + our client script -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
