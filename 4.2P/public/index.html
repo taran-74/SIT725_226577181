@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Bookshelf</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="teal darken-3">
+    <div class="nav-wrapper container">
+      <a href="#" class="brand-logo"><i class="material-icons">menu_book</i>My Bookshelf</a>
+      <ul class="right hide-on-small-only"><li><span class="db-badge"><i class="material-icons left">storage</i>MongoDB</span></li></ul>
+    </div>
+  </nav>
+
+  <div class="section header-section teal lighten-5">
+    <div class="container center-align">
+      <h3 class="teal-text text-darken-3">Books Worth Reading</h3>
+      <p class="flow-text grey-text text-darken-2">Every book here is stored in a MongoDB database. Filter by genre, or add your own book.</p>
+      <a class="waves-effect waves-light btn modal-trigger teal darken-2" href="#addModal">
+        <i class="material-icons left">add</i>Add a Book
+      </a>
+    </div>
+  </div>
+
+  <div class="container section">
+    <div class="row filter-row">
+      <div class="col s12 m4 select-field">
+        <label for="genreFilter">Filter by genre</label>
+        <select id="genreFilter" class="browser-default"><option value="">All genres</option></select>
+      </div>
+      <div class="col s12 m8 right-align count-text grey-text" id="bookCount"></div>
+    </div>
+    <!-- Cards are added here by scripts.js after calling GET /api/books -->
+    <div class="row" id="card-section"></div>
+  </div>
+
+  <!-- Modal form: POST /api/books saves the book in MongoDB -->
+  <div id="addModal" class="modal">
+    <div class="modal-content">
+      <h4>Add a Book</h4>
+      <div class="row">
+        <form class="col s12" id="addForm" novalidate>
+          <div class="input-field col s12 m6">
+            <input id="title" type="text" maxlength="100">
+            <label for="title">Title</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <input id="author" type="text" maxlength="60">
+            <label for="author">Author</label>
+          </div>
+          <div class="col s12 m4 select-field">
+            <label for="genre">Genre</label>
+            <select id="genre" class="browser-default"><option value="" disabled selected>Choose a genre</option></select>
+          </div>
+          <div class="input-field col s6 m4">
+            <input id="publishedYear" type="number" min="1450" max="2026">
+            <label for="publishedYear">Year published</label>
+          </div>
+          <div class="input-field col s6 m4">
+            <input id="rating" type="number" min="1" max="5">
+            <label for="rating">My rating (1-5)</label>
+          </div>
+          <div class="input-field col s12">
+            <textarea id="summary" class="materialize-textarea" maxlength="300"></textarea>
+            <label for="summary">Short summary</label>
+          </div>
+        </form>
+        <p id="formError" class="red-text col s12"></p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect btn-flat">Cancel</a>
+      <a href="#!" id="formSubmit" class="waves-effect waves-light btn teal darken-2">Save to database</a>
+    </div>
+  </div>
+
+  <footer class="page-footer teal darken-3">
+    <div class="container">
+      <h5 class="white-text">My Bookshelf</h5>
+      <p class="grey-text text-lighten-4">SIT725 Task 4.2P - Add a Database (Express + Materialize + MongoDB)</p>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">&copy; 2026 SIT725 Student 226577181</div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>

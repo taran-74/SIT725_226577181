@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start Bookshelf app (4.2P)",
+      "type": "npm",
+      "script": "start",
+      "group": { "kind": "build", "isDefault": true },
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated", "clear": true },
+      "runOptions": { "runOn": "folderOpen" }
+    },
+    {
+      "label": "Seed sample books (4.2P)",
+      "type": "npm",
+      "script": "seed",
+      "problemMatcher": []
+    }
+  ]
+}

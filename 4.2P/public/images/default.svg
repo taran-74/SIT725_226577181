@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="600" viewBox="0 0 400 600">
+  <rect width="400" height="600" fill="#5d4037"/>
+  <rect x="0" y="0" width="24" height="600" fill="#000" opacity="0.18"/>
+  <rect x="80" y="120" width="240" height="180" rx="8" fill="none" stroke="#ffcc80" stroke-width="6"/>
+  <path d="M120 270 L170 200 L210 250 L240 220 L280 270 Z" fill="#ffcc80"/>
+  <text x="200" y="420" font-family="Georgia, serif" font-size="34" fill="#fff" text-anchor="middle" font-weight="bold">NEW BOOK</text>
+  <text x="200" y="520" font-family="Arial, sans-serif" font-size="20" fill="#ffcc80" text-anchor="middle" letter-spacing="3">ADDED BY YOU</text>
+</svg>
